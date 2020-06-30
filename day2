@@ -9,3 +9,21 @@ def sign():
     blocks.print(message ,REDSTONE_BLOCK, pos2, WEST)
 
 player.on_chat("run", sign)
+
+
+
+def game():
+    player.teleport(pos(0, 10, 0))
+    blocks.fill(GLASS, pos(-5, -2, -5), pos(5, -2, 5))
+    while True:
+        positionx = randint(-3, 3)
+        positiony = randint(3 , 5)
+        positionz = randint(-3, 3)
+
+        blocks.place(SAND, pos(positionx, positiony, positionz))
+
+        loops.pause(500)
+
+
+
+game()
