@@ -1,6 +1,7 @@
-#This code is for day2 of the camp
 def sign():
     player.say("Function running")
+    blocks.print("Hi", TNT, pos(0, 3, 0), WEST)
+    blocks.print("Hi", REDSTONE_BLOCK, pos(0,3,1), WEST)
 
 
 player.on_chat("run", sign)
