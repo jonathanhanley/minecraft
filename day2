@@ -1,1 +1,6 @@
 #This code is for day2 of the camp
+def sign():
+    player.say("Function running")
+
+
+player.on_chat("run", sign)
