@@ -14,15 +14,16 @@ player.on_chat("run", sign)
 
 def game():
     player.teleport(pos(0, 10, 0))
-    blocks.fill(GLASS, pos(-5, -2, -5), pos(5, -2, 5))
+    blocks.fill(DIRT, pos(-5, -2, -5), pos(5, -2, 5))
+
     while True:
-        positionx = randint(-3, 3)
-        positiony = randint(3 , 5)
-        positionz = randint(-3, 3)
+        positionx = randint(-2, 2)
+        positiony = randint(-1 , 2)
+        positionz = randint(-2, 2)
 
-        blocks.place(SAND, pos(positionx, positiony, positionz))
-
-        loops.pause(500)
+        blocks.place(OBSIDIAN, pos(positionx, positiony, positionz))
+        blocks.fill(LAVA, pos(-5, -3, -5), pos(5, -3, 5))
+        loops.pause(1000)
 
 
 
