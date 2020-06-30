@@ -19,7 +19,7 @@ def game():
 
     global on
     on = True
-
+    score = 1
     while True:
         if on == True:
             positionx = randint(-2, 2)
@@ -28,6 +28,8 @@ def game():
 
             blocks.place(OBSIDIAN, pos(positionx, positiony, positionz))
             blocks.fill(LAVA, pos(-5, -3, -5), pos(5, -3, 5))
+            player.say("Your score is " + str(score))
+            score = score + 1
             loops.pause(1000)
 
 
@@ -36,4 +38,5 @@ def stop():
     on = False
 player.on_chat("stop", stop)
 player.on_chat("go", game)
+
 
